@@ -5,18 +5,21 @@ function takeANumber (deliLine, name) {
   return `Welcome, ${name}. You are number ${deliLine.length} in line.`
 }
 
-function nowServing(katzDeliLine){
-  if (!katzDeliLine.length){
+function nowServing(deliLine){
+  if (!deliLine.length){
     return "There is nobody waiting to be served!"
   } else {
-    return `Currently serving ${katzDeliLine.shift()}.`;
+    return `Currently serving ${deliLine.shift()}.`;
   }
 }
 
-function currentLine(katzDeliLine){
+takeANumber(katzDeli, "Denali")
+nowServing(katzDeli)
+
+function currentLine(deliLine){
   var line = []
-  for(var i=0; i < katzDeliLine.length; i++){
-    line.push(`${i+1}. ${katzDeliLine[i]}`)
+  for(var i=0; i < deliLine.length; i++){
+    line.push(`${i+1}. ${deliLine[i]}`)
   }
   if (!line.length){
     return "The line is currently empty."
